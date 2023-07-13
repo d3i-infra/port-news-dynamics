@@ -4,6 +4,10 @@
   </a>
 </p>
 
+# Port: News dynamics Weizenbaum institute
+
+This respository contains code related to a TikTok study performed by the Weizenbaum institute.
+
 # Port: A frontend for data donation
 
 Port is a research tool that enables individuals to donate their digital trace data for academic research in a secure, transparent, and privacy-preserving way. 
