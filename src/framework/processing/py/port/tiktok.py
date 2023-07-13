@@ -99,9 +99,9 @@ def video_browsing_history_to_df(tiktok_zip: str, validation: ValidateInput) -> 
     try: 
         history = d["Activity"]["Video Browsing History"].get("VideoList", [])
         for item in history:
-            datapoints.append((item.get("Date", None), item.get("Link", None)))
+            datapoints.append((item.get("Date", None), "You watched a video", item.get("Link", None)))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Url"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract tiktok history: %s", e)
 
@@ -118,9 +118,9 @@ def favorite_videos_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.Data
     try: 
         history = d["Activity"]["Favorite Videos"].get("FavoriteVideoList", [])
         for item in history:
-            datapoints.append((item.get("Date", None), item.get("Link", None)))
+            datapoints.append((item.get("Date", None), "You favorited a video", ""))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Url"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
@@ -137,9 +137,9 @@ def following_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
     try: 
         history = d["Activity"]["Following List"].get("Following", [])
         for item in history:
-            datapoints.append((item.get("Date", None), item.get("UserName", None)))
+            datapoints.append((item.get("Date", None), "You followed someone", ""))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Username"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
@@ -156,9 +156,9 @@ def like_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
     try: 
         history = d["Activity"]["Like List"].get("ItemFavoriteList", [])
         for item in history:
-            datapoints.append((item.get("Date", None), item.get("Link", None)))
+            datapoints.append((item.get("Date", None), "You liked a vide", ""))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Url"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
@@ -177,10 +177,11 @@ def search_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataF
         for item in history:
             datapoints.append((
                 item.get("Date", None),
-                item.get("SearchTerm", None)
+                "You searched a something",
+                ""
             ))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Search Term"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
@@ -199,12 +200,11 @@ def share_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFr
         for item in history:
             datapoints.append((
                 item.get("Date", None), 
-                item.get("SharedContent", None),
-                item.get("Link", None),
-                item.get("Method", None)
+                "You shared a video",
+                ""
             ))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Shared Content", "Url", "Method"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
@@ -223,10 +223,11 @@ def comment_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
         for item in history:
             datapoints.append((
                 item.get("Date", None), 
-                item.get("Comment", None)
+                "You posted a comment",
+                ""
             ))
 
-        out = pd.DataFrame(datapoints, columns=["Date", "Comment"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
@@ -241,15 +242,42 @@ def watch_live_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.D
 
     try: 
         history = d["Tiktok Live"]["Watch Live History"].get("WatchLiveMap", {})
-        for k, v in history.items():
+        for _, v in history.items():
             datapoints.append((
-                k,
-                v.get("Link", ""),
-                v.get("WatchTime", "")
+                v.get("WatchTime", ""),
+                "You watched a live stream",
+                v.get("Link", "")
             ))
 
-        out = pd.DataFrame(datapoints, columns=["Id", "Link", "Date"])
+        out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
         logger.error("Could not extract: %s", e)
+
+    return out
+
+
+def create_activity_history(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
+    """
+    Extacts all activities on tiktok with a timestamp
+
+    TODO: CHECK IF ALL ACTIVITIES ARE COVERED
+    """
+
+    funs = [ 
+        video_browsing_history_to_df,
+        favorite_videos_to_df,
+        following_to_df,
+        like_to_df,
+        search_history_to_df,
+        share_history_to_df,
+        comment_to_df,
+        watch_live_history_to_df,
+    ]
+
+    dfs = [fun(tiktok_zip, validation) for fun in funs]
+    dfs = [df for df in dfs if not df.empty]
+
+    out = pd.concat(dfs, axis=0, ignore_index=True)
+    out = out.sort_values(by="Date")
 
     return out
