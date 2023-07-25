@@ -156,7 +156,7 @@ def like_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
     try: 
         history = d["Activity"]["Like List"].get("ItemFavoriteList", [])
         for item in history:
-            datapoints.append((item.get("Date", None), "You liked a vide", ""))
+            datapoints.append((item.get("Date", None), "You liked a video", ""))
 
         out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url"])
     except Exception as e:
@@ -177,7 +177,7 @@ def search_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataF
         for item in history:
             datapoints.append((
                 item.get("Date", None),
-                "You searched a something",
+                "You searched for something",
                 ""
             ))
 
