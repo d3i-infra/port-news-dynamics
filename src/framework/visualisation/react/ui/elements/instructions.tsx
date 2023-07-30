@@ -68,6 +68,7 @@ function prepareCopy ({ platform, locale }: Props): Copy {
 const title = new TextBundle()
   .add('en', 'Download')
   .add('nl', 'Download')
+  .add('de', 'Download')
 
 function renderBullet (text: string): JSX.Element {
   return (

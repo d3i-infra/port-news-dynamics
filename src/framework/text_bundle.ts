@@ -3,7 +3,7 @@ import { Translatable } from './types/elements'
 
 export default class TextBundle implements Translatable {
   translations: { [key: string]: string } = {}
-  defaultLocale: string = 'nl'
+  defaultLocale: string = 'de'
 
   add (locale: string, text: string): TextBundle {
     this.translations[locale] = text

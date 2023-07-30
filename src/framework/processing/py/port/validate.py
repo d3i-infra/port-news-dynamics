@@ -13,6 +13,7 @@ class Language(Enum):
     """ Languages Enum """
     EN = 1
     NL = 2
+    DE = 3
 
 
 class DDPFiletype(Enum):

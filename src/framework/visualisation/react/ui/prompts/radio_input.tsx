@@ -79,4 +79,5 @@ const continueButtonLabel = (): Translatable => {
   return new TextBundle()
     .add('en', 'Continue')
     .add('nl', 'Doorgaan')
+    .add('de', 'Fortsetzen')
 }
