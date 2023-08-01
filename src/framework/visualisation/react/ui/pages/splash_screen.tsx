@@ -55,7 +55,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
     <>
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          You are about to start the process of donating your data for a research project run by the University of Amasterdam and the Weizenbaum Instiute for the Networked Society in Berlin.
+          You are about to start the process of donating your data for a research project run by the University of Amsterdam and the Weizenbaum Instiute for the Networked Society in Berlin.
           The data that we ask you to donate will be used for academic research to gain insight into how platforms work.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
