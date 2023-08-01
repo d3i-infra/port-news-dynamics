@@ -173,7 +173,7 @@ def extract_tiktok(tiktok_file: str, validation: validate.ValidateInput) -> list
 
     df = tiktok.create_activity_history(tiktok_file, validation)
     if not df.empty:
-        table_title = props.Translatable({"en": "Tiktok Activity history", "nl": "Tiktok Activity history", "de": "TikTok Aktivity history"})
+        table_title = props.Translatable({"en": "Tiktok Activity history", "nl": "Tiktok Activity history", "de": "TikTok Activity history"})
         tables = create_consent_form_tables("tiktok_activity_history", table_title, df) 
         tables_to_render.extend(tables)
 
