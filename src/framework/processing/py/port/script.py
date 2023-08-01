@@ -11,6 +11,7 @@ import port.tiktok as tiktok
 
 from port.api.commands import (CommandSystemDonate, CommandUIRender)
 
+
 LOG_STREAM = io.StringIO()
 
 logging.basicConfig(

@@ -18,6 +18,7 @@ from port.validate import (
     DDPFiletype,
 )
 
+
 logger = logging.getLogger(__name__)
 
 DDP_CATEGORIES = [
@@ -265,7 +266,7 @@ def logging_in_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame
     out = pd.DataFrame()
 
     try: 
-        history = d["Activity"]["Login List"].get("LoginHistoryList", [])
+        history = d["Activity"]["Login History"].get("LoginHistoryList", [])
         for item in history:
             datapoints.append((item.get("Date", None), "You logged in", None, item.get("DeviceSystem", None), None))
 
@@ -295,6 +296,9 @@ def blocking_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.Dat
     return out
 
 # Extract chatting history
+'''
+Needs some adaption: list of dicts of single chat converstations
+'''
 def chat_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
 
     d = read_tiktok_file(tiktok_zip, validation)
@@ -302,17 +306,19 @@ def chat_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFra
     out = pd.DataFrame()
 
     try: 
-        history = d["Direct Messages"]["Chat History"].get("ChatHistory", [])
-        for item in history:
-            datapoints.append((item.get("Date", None), "You sent a private message", None, None, None))
+        history = d["Direct Messages"]["Chat History"].get("ChatHistory", {})
+        for _,chats in history.items():
+            for chat in chats:
+                datapoints.append((chat.get("Date", None), "You sent/received a private message", None, None, None))
 
         out = pd.DataFrame(datapoints, columns=["Date", "Action", "Url", "OperatingSystem", "likes"])
+        
     except Exception as e:
         logger.error("Could not extract: %s", e)
 
     return out
 
-# Extract chatting history
+# Extract posting history
 def posting_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.DataFrame:
 
     d = read_tiktok_file(tiktok_zip, validation)
@@ -320,7 +326,7 @@ def posting_history_to_df(tiktok_zip: str, validation: ValidateInput) -> pd.Data
     out = pd.DataFrame()
 
     try: 
-        history = d["Videos"].get("Videos", [])
+        history = d["Video"]["Videos"].get("VideoList", [])
         for item in history:
             datapoints.append((item.get("Date", None), "You posted a video", None, None, item.get("Likes", None)))
 
@@ -338,20 +344,20 @@ def create_activity_history(tiktok_zip: str, validation: ValidateInput) -> pd.Da
     
     > one df or 4 different ones? - for simplicity one with sparse additional attributes?
     ACTIVITIES (timestamp, activity, video to link[watching & favourites & watch live], operating system[only logging in], likes[only video posted])
-    - marked with x = done
+    - marked with x = done, v = works
     -----------------------------------------------------------------------
-    - Watching (timestamp, "you watched a video", link to video, nan, nan) x
-    - Following (timestamp, "you followed someone", nan, nan, nan) x
-    - favorites (timestamp, "you favourited a video, link to video, nan, nan) x
-    - logging in (timestamp, "you logged in", nan, operating system, nan) x
-    - searching (timestamp, "you searched something", nan, nan, nan) x
-    - sharing (timestamp, "you shared something", nan, nan, nan) x
-    - blocking (timestamp, you clocked someone, nan, nan, nan) x
-    - commenting (timestamp, you commented something, nan, nan, nan) x
-    - chatting (timestamp, you chatted with someone, nan, nan, nan) x
-    - going live (timestamp, "you went live", nan, nan, nan) x
-    . watching live streams (timestamp, "you watched a live stream", link, nan, nan) x
-    - posting videos (timestamp, "you posted a video", nan, nan, likes)
+    - Watching (timestamp, "you watched a video", link to video, nan, nan) x v
+    - Following (timestamp, "you followed someone", nan, nan, nan) x v
+    - favorites (timestamp, "you favourited a video, link to video, nan, nan) x v
+    - logging in (timestamp, "you logged in", nan, operating system, nan) x v
+    - searching (timestamp, "you searched something", nan, nan, nan) x v
+    - sharing (timestamp, "you shared something", nan, nan, nan) x v
+    - blocking (timestamp, you clocked someone, nan, nan, nan) x v
+    - commenting (timestamp, you commented something, nan, nan, nan) x v
+    - chatting (timestamp, you chatted with someone, nan, nan, nan) x v
+    - going live (timestamp, "you went live", nan, nan, nan) x ?
+    . watching live streams (timestamp, "you watched a live stream", link, nan, nan) x v
+    - posting videos (timestamp, "you posted a video", nan, nan, likes) x v
     
     
     """
