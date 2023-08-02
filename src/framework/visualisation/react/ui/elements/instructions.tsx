@@ -2,6 +2,7 @@ import { Translator } from '../../../../translator'
 import { ReactFactoryContext } from '../../factory'
 import { Title3 } from './text'
 import TwitterSvg from '../../../../../assets/images/twitter.svg'
+import TiktokSvg from '../../../../../assets/images/tiktok.svg'
 import FacebookSvg from '../../../../../assets/images/facebook.svg'
 import InstagramSvg from '../../../../../assets/images/instagram.svg'
 import YoutubeSvg from '../../../../../assets/images/youtube.svg'
@@ -12,6 +13,8 @@ const linkTwitter: string = 'https://eyra.co'
 const linkFacebook: string = 'https://eyra.co'
 const linkInstagram: string = 'https://eyra.co'
 const linkYoutube: string = 'https://eyra.co'
+const linkTikTokDe: string = 'https://support.tiktok.com/de/account-and-privacy/personalized-ads-and-data/requesting-your-data'
+const linkTikTokEn: string = 'https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data'
 
 interface InstructionsProps {
   platform: string
@@ -126,6 +129,22 @@ const bulletsYoutubeNl: string[] = [
   'Kies het bestand en ga verder.'
 ]
 
+const bulletsTikTokEn: string[] = [
+  'Open your Tiktok App & click on "Profile" in the lower right corner.',
+  'Klick on the three vertical lines to open a hidden menu in the upper left corner',
+  'Click on "Settings and privacy" and then on "Account".',
+  'Here choose the thrid option "Download your data".',
+  'Switch to the "Download data" tab and download your data donation.'
+]
+
+const bulletsTikTokDe: string[] = [
+  'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
+  'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
+  'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
+  'Klick hier auf die dritte Option "Deine Daten herunterladen".',
+  'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.'
+]
+
 const bullets: Record<string, Record<string, string[]>> = {
   twitter: {
     en: bulletsTwitterEn,
@@ -142,6 +161,10 @@ const bullets: Record<string, Record<string, string[]>> = {
   youtube: {
     en: bulletsYoutubeEn,
     nl: bulletsYoutubeNl
+  },
+   tiktok: {
+    en: bulletsTikTokEn,
+    de: bulletsTikTokDe
   }
 }
 
@@ -169,6 +192,10 @@ const links: Record<string, Record<string, JSX.Element>> = {
   youtube: {
     en: linkEn(linkYoutube),
     nl: linkNl(linkYoutube)
+  },
+  tiktok: {
+    en: linkEn(linkTikTokEn),
+    de: linkNl(linkTikTokDe)
   }
 }
 
@@ -176,5 +203,6 @@ const icon: Record<string, string> = {
   twitter: TwitterSvg,
   facebook: FacebookSvg,
   instagram: InstagramSvg,
-  youtube: YoutubeSvg
+  youtube: YoutubeSvg,
+  tiktok: TiktokSvg
 }

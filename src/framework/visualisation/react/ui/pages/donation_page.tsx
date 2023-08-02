@@ -59,18 +59,18 @@ export const DonationPage = (props: Props): JSX.Element => {
     />
   )
 
-  //const sidebar: JSX.Element = (
-  //  <Sidebar
-  //    logo={LogoSvg}
-  //    content={
-  //      <Instructions platform={platform} locale={locale} />
-  //    }
-  //  />
-  //)
-
-  const sidebar: JSX.Element = (
-    <> </>
+ const sidebar: JSX.Element = (
+    <Sidebar
+      logo={LogoSvg}
+      content={
+        <Instructions platform={platform} locale={locale} />
+      }
+    />
   )
+
+//  const sidebar: JSX.Element = (
+//    <> </>
+// )
 
   const body: JSX.Element = (
     <>
