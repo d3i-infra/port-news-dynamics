@@ -44,6 +44,7 @@ STATUS_CODES = [
     StatusCode(id=0, description="Valid DDP", message=""),
     StatusCode(id=1, description="Not a valid DDP", message=""),
     StatusCode(id=2, description="Bad zip", message=""),
+    StatusCode(id=3, description="Data conditions not met", message=""),
 ]
 
 def validate(file: Path) -> ValidateInput:
@@ -361,6 +362,7 @@ def create_activity_history(tiktok_zip: str, validation: ValidateInput) -> pd.Da
     
     
     """
+    out = pd.DataFrame()
 
     funs = [ 
         video_browsing_history_to_df,
@@ -382,7 +384,20 @@ def create_activity_history(tiktok_zip: str, validation: ValidateInput) -> pd.Da
     dfs = [fun(tiktok_zip, validation) for fun in funs]
     dfs = [df for df in dfs if not df.empty]
 
-    out = pd.concat(dfs, axis=0, ignore_index=True)
-    out = out.sort_values(by="Date")
+    if len(dfs) > 0:
+        out = pd.concat(dfs, axis=0, ignore_index=True)
+        out = out.sort_values(by="Date")
+
+        # Check conditions that need to meet
+        # 5 of activity OR 200 single activities
+        not_met_days_active_condition = len({date[:10] for date in out["Date"]}) <= 5
+        not_met_number_of_entries_greater_than_200 = len(out) <= 200
+
+        if not_met_days_active_condition or not_met_number_of_entries_greater_than_200:
+            validation.set_status_code(3)
+            out = pd.DataFrame()
+
+    else:
+        validation.set_status_code(3)
 
     return out

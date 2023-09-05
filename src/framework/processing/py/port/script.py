@@ -64,7 +64,23 @@ def process(session_id):
                     LOGGER.info("Payload for %s", platform_name)
                     yield donate_logs(f"{session_id}-tracking")
 
-                    table_list = extraction_fun(file_result.value, validation)
+                    tables_to_donate = extraction_fun(file_result.value, validation)
+
+                    # DDP Data conditions are not met
+                    if validation.status_code.id == 3: 
+                        LOGGER.info("Data conditions not met", platform_name)
+                        yield donate_logs(f"{session_id}-tracking")
+                        retry_result = yield render_donation_page(platform_name, retry_confirmation_data_conditions_not_met(platform_name), progress)
+
+                        if retry_result.__type__ == "PayloadTrue":
+                            continue
+                        else:
+                            LOGGER.info("Skipped during data conditions not met retry %s", platform_name)
+                            yield donate_logs(f"{session_id}-tracking")
+                            break
+                    else:
+                        table_list = tables_to_donate
+
                     break
 
                 # DDP is not recognized: Different status code
@@ -164,15 +180,16 @@ def create_empty_table(platform_name: str) -> props.PropsUIPromptConsentFormTabl
     return table
 
 
+
 ##################################################################
 # Extraction functions
-
 
 
 def extract_tiktok(tiktok_file: str, validation: validate.ValidateInput) -> list[props.PropsUIPromptConsentFormTable]:
     tables_to_render = []
 
     df = tiktok.create_activity_history(tiktok_file, validation)
+
     if not df.empty:
         table_title = props.Translatable({"en": "Tiktok Activity history", "nl": "Tiktok Activity history", "de": "TikTok Activity history"})
         tables = create_consent_form_tables("tiktok_activity_history", table_title, df) 
@@ -207,6 +224,19 @@ def retry_confirmation(platform):
         }
     )
     ok = props.Translatable({"en": "Try again", "nl": "Probeer opnieuw", "de": "Nochmal"})
+    cancel = props.Translatable({"en": "Continue", "nl": "Verder", "de": "Weiter"})
+    return props.PropsUIPromptConfirm(text, ok, cancel)
+
+
+def retry_confirmation_data_conditions_not_met(platform):
+    text = props.Translatable(
+        {
+            "en": f"Data conditions not met",
+            "nl": f"Data conditions not met",
+            "de": f"Data conditions not met",
+        }
+    )
+    ok = props.Translatable({"en": "", "nl": "", "de": ""})
     cancel = props.Translatable({"en": "Continue", "nl": "Verder", "de": "Weiter"})
     return props.PropsUIPromptConfirm(text, ok, cancel)
 
