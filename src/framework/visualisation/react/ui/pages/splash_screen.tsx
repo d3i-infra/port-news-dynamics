@@ -47,7 +47,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
   }
 
   function renderDescription (): JSX.Element {
-    if (locale === 'de') return nlDescription
+    if (locale === 'nl') return nlDescription
     return enDescription
   }
 
@@ -82,7 +82,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
     </>
   )
 
-  const deDescription: JSX.Element = (
+  const nlDescription: JSX.Element = (
     <>
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
@@ -107,36 +107,6 @@ export const SplashScreen = (props: Props): JSX.Element => {
         </div>
         <div className='mb-10'>
             Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung. Weitere Informationen finden Sie auf unserer Datenschutzseite.        </div>
-      </div>
-    </>
-  )
-
-  const nlDescription: JSX.Element = (
-    <>
-      <div className='text-bodylarge font-body text-grey1'>
-        <div className='mb-4'>
-          U kunt zo uw gegevens gaan doneren voor een onderzoek van een onderzoeksinstituut. De gegevens die we u vragen te doneren worden gebruikt voor wetenschappelijke onderzoek om inzicht te krijgen in de werkwijze van sociale media.
-        </div>
-        <div className='mb-4'>
-          We leggen u stap voor stap wat er van u verwacht wordt. Tijdens deze stappen worden geen gegevens opgeslagen of naar een server verstuurd. U kunt zelf rijen uit uw data verwijderen die u niet wilt doneren. Pas als u de vraag krijgt of u de gegevens wilt doneren en u op de knop “Ja, doneer” klikt, worden de gegevens gedoneerd en opgeslagen.
-        </div>
-        <div className='mb-4'>
-          Door op de knop “<span className='font-bodybold'>Ja, doneer</span>” te klikken:
-        </div>
-        <div className='flex flex-col gap-3 mb-6'>
-          <Bullet>
-            <div>Geeft u volledig en vrijwillig toestemming om uw data te doneren voor dit onderzoek.'</div>
-          </Bullet>
-          <Bullet>
-            <div>Geeft u aan te weten dat als uw gegevens worden gebruikt in wetenschappelijke publicaties, of deze op een andere manier openbaar worden gemaakt, dit dan anoniem gebeurt.</div>
-          </Bullet>
-          <Bullet>
-            <div>Geeft u aan te weten dat u het recht hebt om uw toestemming binnen in te trekken.</div>
-          </Bullet>
-        </div>
-        <div className='mb-10'>
-          Deze website houdt ook uw activiteiten bij – bijvoorbeeld op welke pagina’s van deze website u klikt – als deel van dit onderzoek. U kunt meer informatie op onze privacy pagina vinden.
-        </div>
       </div>
     </>
   )
@@ -172,15 +142,12 @@ export const SplashScreen = (props: Props): JSX.Element => {
 
 const title = new TextBundle()
   .add('en', 'Welcome')
-  .add('nl', 'Welkom')
-  .add('de', 'Willkommen')
+  .add('nl', 'Willkommen')
 
 const continueButton = new TextBundle()
   .add('en', 'Start')
   .add('nl', 'Start')
-  .add('de', 'Start')
 
 const privacyLabel = new TextBundle()
   .add('en', 'I have read and agree with the above terms.')
-  .add('nl', 'Ik heb deze voorwaarden gelezen en ben hiermee akkoord.')
-  .add('de', 'Ich habe die obenstehenden Bedingungen gelesen und stimme ihnen zu.')
+  .add('nl', 'Ich habe die obenstehenden Bedingungen gelesen und stimme ihnen zu.')

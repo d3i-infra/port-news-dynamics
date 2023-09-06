@@ -172,8 +172,7 @@ def create_empty_table(platform_name: str) -> props.PropsUIPromptConsentFormTabl
     """
     title = props.Translatable({
        "en": "Nothing went wrong, but we couldn't find anything in the uploaded file.",
-       "nl": "Er ging niks mis, maar we konden niks vinden",
-        "de":"Es ist nichts schief gelaufe, aber die hochgeladene Datei ist leer."
+        "nl":"Es ist nichts schief gelaufe, aber die hochgeladene Datei ist leer."
     })
     df = pd.DataFrame(["No data found"], columns=["No data found"])
     table = props.PropsUIPromptConsentFormTable(f"{platform_name}_no_data_found", title, df)
@@ -191,7 +190,7 @@ def extract_tiktok(tiktok_file: str, validation: validate.ValidateInput) -> list
     df = tiktok.create_activity_history(tiktok_file, validation)
 
     if not df.empty:
-        table_title = props.Translatable({"en": "Tiktok Activity history", "nl": "Tiktok Activity history", "de": "TikTok Activity history"})
+        table_title = props.Translatable({"en": "Tiktok Activity history",  "nl": "TikTok Activity history"})
         tables = create_consent_form_tables("tiktok_activity_history", table_title, df) 
         tables_to_render.extend(tables)
 
@@ -208,7 +207,7 @@ def render_end_page():
 
 
 def render_donation_page(platform, body, progress):
-    header = props.PropsUIHeader(props.Translatable({"en": platform, "nl": platform, "de": platform}))
+    header = props.PropsUIHeader(props.Translatable({"en": platform,  "nl": platform}))
 
     footer = props.PropsUIFooter(progress)
     page = props.PropsUIPageDonation(platform, header, body, footer)
@@ -219,12 +218,11 @@ def retry_confirmation(platform):
     text = props.Translatable(
         {
             "en": f"Unfortunately, we could not process your {platform} file. If you are sure that you selected the correct file, press Continue. To select a different file, press Try again.",
-            "nl": f"Helaas, kunnen we uw {platform} bestand niet verwerken. Weet u zeker dat u het juiste bestand heeft gekozen? Ga dan verder. Probeer opnieuw als u een ander bestand wilt kiezen.",
-            "de": f"Leider konnten wir deine {platform} Datei nicht verarbeiten. Wenn du sicher bist, dass du die korrekte Datei ausgewählt hast, klicke auf 'Weiter'. Um eine andere Datei auszuwählen, klicken auf 'Nochmal'"
+            "nl": f"Leider konnten wir deine {platform} Datei nicht verarbeiten. Wenn du sicher bist, dass du die korrekte Datei ausgewählt hast, klicke auf 'Weiter'. Um eine andere Datei auszuwählen, klicken auf 'Nochmal'"
         }
     )
-    ok = props.Translatable({"en": "Try again", "nl": "Probeer opnieuw", "de": "Nochmal"})
-    cancel = props.Translatable({"en": "Continue", "nl": "Verder", "de": "Weiter"})
+    ok = props.Translatable({"en": "Try again",  "nl": "Nochmal"})
+    cancel = props.Translatable({"en": "Continue",  "nl": "Weiter"})
     return props.PropsUIPromptConfirm(text, ok, cancel)
 
 
@@ -233,11 +231,10 @@ def retry_confirmation_data_conditions_not_met(platform):
         {
             "en": f"Data conditions not met",
             "nl": f"Data conditions not met",
-            "de": f"Data conditions not met",
         }
     )
-    ok = props.Translatable({"en": "", "nl": "", "de": ""})
-    cancel = props.Translatable({"en": "Continue", "nl": "Verder", "de": "Weiter"})
+    ok = props.Translatable({"en": "",  "nl": ""})
+    cancel = props.Translatable({"en": "Continue",  "nl": "Weiter"})
     return props.PropsUIPromptConfirm(text, ok, cancel)
 
 
@@ -245,8 +242,7 @@ def prompt_file(extensions, platform):
     description = props.Translatable(
         {
             "en": f"Please follow the download instructions and choose the file that you stored on your device. Click “Skip” at the right bottom, if you do not have a file from {platform}.",
-            "nl": f"Volg de download instructies en kies het bestand dat u opgeslagen heeft op uw apparaat. Als u geen {platform} bestand heeft klik dan op “Overslaan” rechts onder.",
-            "de": f"Bitte folge der Download-Anleitung und wähle die entsprechende Datei aus. Drücke 'Überspringen' wenn du keine {platform} Datei hast."
+            "nl": f"Bitte folge der Download-Anleitung und wähle die entsprechende Datei aus. Drücke 'Überspringen' wenn du keine {platform} Datei hast."
         }
     )
     return props.PropsUIPromptFileInput(description, extensions)

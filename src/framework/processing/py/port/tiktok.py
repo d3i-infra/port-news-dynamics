@@ -390,13 +390,14 @@ def create_activity_history(tiktok_zip: str, validation: ValidateInput) -> pd.Da
 
         # Check conditions that need to meet
         # 5 of activity OR 200 single activities
-        not_met_days_active_condition = len({date[:10] for date in out["Date"]}) <= 5
-        not_met_number_of_entries_greater_than_200 = len(out) <= 200
+        days_active_condition_met = len({date[:10] for date in out["Date"]}) >= 5
+        number_of_entries_greater_than_200_met = len(out) >= 200
 
-        if not_met_days_active_condition or not_met_number_of_entries_greater_than_200:
-            validation.set_status_code(3)
+        if days_active_condition_met or number_of_entries_greater_than_200_met:
+            pass
+        else:
             out = pd.DataFrame()
-
+            validation.set_status_code(3)
     else:
         validation.set_status_code(3)
 
