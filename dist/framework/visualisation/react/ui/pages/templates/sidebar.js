@@ -10,6 +10,19 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+//export const Sidebar = (props: SidebarProps): JSX.Element => {
+//  return (
+//    <div className='flex flex-col gap-10'>
+//      <div className='flex-wrap flex flex-row'>
+//        <div className='flex-grow' />
+//        <div className='flex-grow' />
+//      </div>
+//      <div>
+//        {props.content}
+//      </div>
+//    </div>
+//  )
+//}
 export var Sidebar = function (props) {
-    return (_jsxs("div", __assign({ className: 'flex flex-col gap-10' }, { children: [_jsxs("div", __assign({ className: 'flex-wrap flex flex-row' }, { children: [_jsx("div", { className: 'flex-grow' }), _jsx("div", { className: 'flex-grow' })] })), _jsx("div", { children: props.content })] })));
+    return (_jsxs("div", __assign({ className: 'flex flex-col gap-10' }, { children: [_jsxs("div", __assign({ className: 'flex-wrap flex flex-row' }, { children: [_jsx("div", { className: 'flex-grow' }), _jsx("div", __assign({ className: 'h-logo' }, { children: _jsx("img", { src: props.logo }) })), _jsx("div", { className: 'flex-grow' })] })), _jsx("div", { children: props.content })] })));
 };

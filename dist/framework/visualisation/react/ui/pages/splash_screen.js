@@ -16,7 +16,8 @@ import { Translator } from '../../../../translator';
 import { PrimaryButton } from '../elements/button';
 import { CheckBox } from '../elements/check_box';
 import { Label, Title1 } from '../elements/text';
-import LogoSvg from '../../../../../assets/images/logo.svg';
+//import LogoSvg from '../../../../../assets/images/logo.svg'
+import LogoSvg from '../../../../../assets/images/logo.png';
 import { Footer } from './templates/footer';
 import { Page } from './templates/page';
 import { Sidebar } from './templates/sidebar';

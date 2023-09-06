@@ -1,7 +1,7 @@
 import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
 import { Footer } from './templates/footer';
 import { Sidebar } from './templates/sidebar';
-import LogoSvg from '../../../../../assets/images/logo.svg';
+import LogoSvg from '../../../../../assets/images/logo.png';
 import { Page } from './templates/page';
 import TextBundle from '../../../../text_bundle';
 import { Translator } from '../../../../translator';
