@@ -444,63 +444,52 @@ interface Copy {
 
 const link = new TextBundle()
   .add('en', 'Check out')
-  .add('nl', 'Bekijk')
-  .add('de', 'Anschauen')
+  .add('nl', 'Anschauen')
 
 const searchPlaceholder = new TextBundle()
   .add('en', 'Search')
-  .add('nl', 'Zoeken')
-  .add('de', 'Suchen')
+  .add('nl', 'Suchen')
 
 const noDataLabel = new TextBundle()
   .add('en', 'No data found')
-  .add('nl', 'Geen gegevens gevonden')
-  .add('de', 'Keine Daten gefunden')
+  .add('nl', 'Keine Daten gefunden')
 
 const noDataLeftLabel = new TextBundle()
   .add('en', 'All data removed')
-  .add('nl', 'Alle gegevens verwijderd')
-  .add('de', 'Alle Daten wurden entfernt')
+  .add('nl', 'Alle Daten wurden entfernt')
 
 const noResultsLabel = new TextBundle()
   .add('en', 'No search results')
-  .add('nl', 'Geen zoek resultaten')
-  .add('de', 'kein Suchergebnis')
+  .add('nl', 'kein Suchergebnis')
 
 const editLabel = new TextBundle()
   .add('en', 'Adjust')
-  .add('nl', 'Aanpassen')
-  .add('de', 'Anpassen')
+  .add('nl', 'Anpassen')
 
 const undoLabel = new TextBundle()
   .add('en', 'Undo')
-  .add('nl', 'Herstel')
-  .add('de', 'Rückgängig')
+  .add('nl', 'Rückgängig')
 
 const deleteLabel = new TextBundle()
   .add('en', 'Delete selected')
-  .add('nl', 'Verwijder selectie')
-  .add('de', 'Auswahl löschen')
+  .add('nl', 'Auswahl löschen')
 
 function deletedNoneRowLabel (): TextBundle {
   return new TextBundle()
     .add('en', 'No adjustments')
-    .add('nl', 'Geen aanpassingen')
-    .add('de', 'Keine Anpassungen')
+    .add('nl', 'Keine Anpassungen')
 }
 
 function deletedRowLabel (amount: number): TextBundle {
   return new TextBundle()
     .add('en', `${amount} row deleted`)
-    .add('nl', `${amount} rij verwijderd`)
-    .add('de', `${amount} Zeilen gelöscht`)
+    .add('nl', `${amount} Zeilen gelöscht`)
 }
 
 function deletedRowsLabel (amount: number): TextBundle {
   return new TextBundle()
     .add('en', `${amount} rows deleted`)
-    .add('nl', `${amount} rijen verwijderd`)
-    .add('de', `${amount} Zeilen gelöscht`)
+    .add('nl', `${amount} Zeilen gelöscht`)
 }
 
 function deletedLabel (amount: number): TextBundle {
@@ -512,15 +501,13 @@ function deletedLabel (amount: number): TextBundle {
 function singlePageLabel (): TextBundle {
   return new TextBundle()
     .add('en', '1 page')
-    .add('nl', '1 pagina')
-    .add('de', '1 Seite')
+    .add('nl', '1 Seite')
 }
 
 function multiplePagesLabel (amount: number): TextBundle {
   return new TextBundle()
     .add('en', `${amount} pages`)
-    .add('nl', `${amount} pagina's`)
-    .add('de', `${amount} Seiten`)
+    .add('nl', `${amount} Seiten`)
 }
 
 function pagesLabel (amount: number): TextBundle {

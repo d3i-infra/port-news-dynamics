@@ -56,15 +56,18 @@ export const SplashScreen = (props: Props): JSX.Element => {
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           You are about to start the process of donating your data for a research project run by the University of Amsterdam and the Weizenbaum Instiute for the Networked Society in Berlin.
-          The data that we ask you to donate will be used for academic research to gain insight into how platforms work.
+          The data that we ask you to donate will be used for academic research to gain insight into how social media platforms work.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          We will walk you through this process step by step. During this process no data is stored or sent to a server. You can delete rows from the data before donating. Data will only be donated and stored when you click the button “Yes, donate” on the page that shows your data.
+          We will walk you through this process step by step. During this process no data is stored or sent to a server. Data will only be donated and stored when you click the button “Yes, donate” on the page that shows your data.
         </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           By clicking the button “<span className='font-bodybold'>Yes, donate</span>”:
         </div>
         <div className='flex flex-col gap-3 mb-6'>
+          <Bullet>
+            <div>you have read and agreed with the information provided during the onboarding survey.</div>
+          </Bullet>
           <Bullet>
             <div>you fully and voluntarily agree to donate your data for this research.</div>
           </Bullet>
@@ -72,7 +75,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
             <div>you are aware that when your data is used for academic publications, or made publicly available in some other form, this will be anonymous.</div>
           </Bullet>
           <Bullet>
-            <div>you are aware that you have the right to withdraw your permission.</div>
+            <div>you are aware that you have the right to withdraw your permission for this data to be used, until the pseudonyms are deleted from the dataset. This will happen once the data collection phase has ended, no later than within 6 weeks.</div>
           </Bullet>
         </div>
         <div className='mb-10'>
@@ -87,23 +90,25 @@ export const SplashScreen = (props: Props): JSX.Element => {
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           Sie stehen kurz davor, den Prozess zu starten, Ihre Daten für ein Forschungsprojekt der Universität von Amsterdam und des Weizenbaum Instituts für die vernetzte Gesellschaft in Berlin zu spenden.
-          Die Daten, um die wir Sie bitten zu spenden, werden für akademische Forschung verwendet, um Einblicke zu gewinnen, wie Plattformen funktionieren.
+            Die Daten, um deren Spende wit Sie bitten, werden für die akademische Forschung verwendet, um Einblicke darüber zu gewinnen, wie Social Media Plattformen funktionieren.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Sie können Zeilen aus den Daten löschen, bevor Sie spenden. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.
-        </div>
+            Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.        </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           Durch das klicken auf den Button “<span className='font-bodybold'>Ja, spenden</span>”:
         </div>
         <div className='flex flex-col gap-3 mb-6'>
           <Bullet>
-            <div> erklären Sie sich vollständig und freiwillig einverstanden, Ihre Daten für diese Forschung zu spenden.</div>
+            <div>erklären Sie, dass Sie die Informationen im Onboarding-Survey zur Kenntnis genommen haben und diesen Zustimmen.</div>
           </Bullet>
           <Bullet>
-            <div>sind sie sich bewusst, dass, wenn Ihre Daten für akademische Veröffentlichungen genutzt werden oder in irgendeiner anderen Form öffentlich gemacht werden, dies anonym geschehen wird.</div>
+            <div>erklären Sie sich vollständig und freiwillig einverstanden, Ihre Daten für diese Forschung zu spenden.</div>
           </Bullet>
           <Bullet>
-            <div>sind sie sich darüber im Klaren, dass Sie das Recht haben, Ihre Zustimmung zurückzuziehen.</div>
+            <div>sind sie sich bewusst, dass, Ihre Daten für akademische Veröffentlichungen genutzt werden oder in einer anderen Form öffentlich gemacht werden können, dies geschieht in anonymisierter Form.</div>
+          </Bullet>
+          <Bullet>
+            <div>sind sie sich darüber im Klaren, dass Sie das Recht haben, Ihre Zustimmung zur Teilnahme auch nachträglich zurückzuziehen könen. Jedoch nur bis die Datenspenden vollständig anonymisiert werde (d.h. wenn die Pseudonyme aus dem Datensatz entfernt sind). Dies ist spätestens in 6 Wochen der Fall.</div>
           </Bullet>
         </div>
         <div className='mb-10'>

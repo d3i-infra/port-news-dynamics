@@ -69,9 +69,8 @@ function prepareCopy ({ platform, locale }: Props): Copy {
 }
 
 const title = new TextBundle()
-  .add('en', 'Download')
-  .add('nl', 'Download')
-  .add('de', 'Download')
+  .add('en', 'Download Instructions')
+  .add('nl', 'Download Anleitung')
 
 function renderBullet (text: string): JSX.Element {
   return (
@@ -134,15 +133,17 @@ const bulletsTikTokEn: string[] = [
   'Klick on the three vertical lines to open a hidden menu in the upper left corner',
   'Click on "Settings and privacy" and then on "Account".',
   'Here choose the thrid option "Download your data".',
-  'Switch to the "Download data" tab and download your data donation.'
+  'Switch to the "Download data" tab and download your data donation.',
+  'The .zip file you can upload directly on this page.'
 ]
 
-const bulletsTikTokDe: string[] = [
+const bulletsTikTokNl: string[] = [
   'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
   'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
   'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
   'Klick hier auf die dritte Option "Deine Daten herunterladen".',
-  'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.'
+  'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.',
+  'Die .zip Datei kannst du auf dieseer Seite hochladen.'
 ]
 
 const bullets: Record<string, Record<string, string[]>> = {
@@ -164,7 +165,7 @@ const bullets: Record<string, Record<string, string[]>> = {
   },
   tiktok: {
     en: bulletsTikTokEn,
-    de: bulletsTikTokDe
+    nl: bulletsTikTokNl
   }
 }
 
@@ -195,7 +196,7 @@ const links: Record<string, Record<string, JSX.Element>> = {
   },
   tiktok: {
     en: linkEn(linkTikTokEn),
-    de: linkNl(linkTikTokDe)
+    nl: linkNl(linkTikTokDe)
   }
 }
 
