@@ -281,53 +281,42 @@ export var Table = function (_a) {
 };
 var link = new TextBundle()
     .add('en', 'Check out')
-    .add('nl', 'Bekijk')
-    .add('de', 'Anschauen');
+    .add('nl', 'Anschauen');
 var searchPlaceholder = new TextBundle()
     .add('en', 'Search')
-    .add('nl', 'Zoeken')
-    .add('de', 'Suchen');
+    .add('nl', 'Suchen');
 var noDataLabel = new TextBundle()
     .add('en', 'No data found')
-    .add('nl', 'Geen gegevens gevonden')
-    .add('de', 'Keine Daten gefunden');
+    .add('nl', 'Keine Daten gefunden');
 var noDataLeftLabel = new TextBundle()
     .add('en', 'All data removed')
-    .add('nl', 'Alle gegevens verwijderd')
-    .add('de', 'Alle Daten wurden entfernt');
+    .add('nl', 'Alle Daten wurden entfernt');
 var noResultsLabel = new TextBundle()
     .add('en', 'No search results')
-    .add('nl', 'Geen zoek resultaten')
-    .add('de', 'kein Suchergebnis');
+    .add('nl', 'kein Suchergebnis');
 var editLabel = new TextBundle()
     .add('en', 'Adjust')
-    .add('nl', 'Aanpassen')
-    .add('de', 'Anpassen');
+    .add('nl', 'Anpassen');
 var undoLabel = new TextBundle()
     .add('en', 'Undo')
-    .add('nl', 'Herstel')
-    .add('de', 'Rückgängig');
+    .add('nl', 'Rückgängig');
 var deleteLabel = new TextBundle()
     .add('en', 'Delete selected')
-    .add('nl', 'Verwijder selectie')
-    .add('de', 'Auswahl löschen');
+    .add('nl', 'Auswahl löschen');
 function deletedNoneRowLabel() {
     return new TextBundle()
         .add('en', 'No adjustments')
-        .add('nl', 'Geen aanpassingen')
-        .add('de', 'Keine Anpassungen');
+        .add('nl', 'Keine Anpassungen');
 }
 function deletedRowLabel(amount) {
     return new TextBundle()
         .add('en', "".concat(amount, " row deleted"))
-        .add('nl', "".concat(amount, " rij verwijderd"))
-        .add('de', "".concat(amount, " Zeilen gel\u00F6scht"));
+        .add('nl', "".concat(amount, " Zeilen gel\u00F6scht"));
 }
 function deletedRowsLabel(amount) {
     return new TextBundle()
         .add('en', "".concat(amount, " rows deleted"))
-        .add('nl', "".concat(amount, " rijen verwijderd"))
-        .add('de', "".concat(amount, " Zeilen gel\u00F6scht"));
+        .add('nl', "".concat(amount, " Zeilen gel\u00F6scht"));
 }
 function deletedLabel(amount) {
     if (amount === 0)
@@ -339,14 +328,12 @@ function deletedLabel(amount) {
 function singlePageLabel() {
     return new TextBundle()
         .add('en', '1 page')
-        .add('nl', '1 pagina')
-        .add('de', '1 Seite');
+        .add('nl', '1 Seite');
 }
 function multiplePagesLabel(amount) {
     return new TextBundle()
         .add('en', "".concat(amount, " pages"))
-        .add('nl', "".concat(amount, " pagina's"))
-        .add('de', "".concat(amount, " Seiten"));
+        .add('nl', "".concat(amount, " Seiten"));
 }
 function pagesLabel(amount) {
     if (amount === 1)

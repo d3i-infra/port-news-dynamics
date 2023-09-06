@@ -45,6 +45,5 @@ export var RadioInput = function (props) {
 var continueButtonLabel = function () {
     return new TextBundle()
         .add('en', 'Continue')
-        .add('nl', 'Doorgaan')
-        .add('de', 'Fortsetzen');
+        .add('nl', 'Fortsetzen');
 };

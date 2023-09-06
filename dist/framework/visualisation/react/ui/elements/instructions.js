@@ -44,9 +44,8 @@ function prepareCopy(_a) {
     };
 }
 var title = new TextBundle()
-    .add('en', 'Download')
-    .add('nl', 'Download')
-    .add('de', 'Download');
+    .add('en', 'Download Instructions')
+    .add('nl', 'Download Anleitung');
 function renderBullet(text) {
     return (_jsx(Bullet, __assign({ frameSize: 'w-5 h-30px' }, { children: _jsx("div", { children: text }) })));
 }
@@ -95,14 +94,16 @@ var bulletsTikTokEn = [
     'Klick on the three vertical lines to open a hidden menu in the upper left corner',
     'Click on "Settings and privacy" and then on "Account".',
     'Here choose the thrid option "Download your data".',
-    'Switch to the "Download data" tab and download your data donation.'
+    'Switch to the "Download data" tab and download your data donation.',
+    'The .zip file you can upload directly on this page.'
 ];
-var bulletsTikTokDe = [
+var bulletsTikTokNl = [
     'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
     'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
     'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
     'Klick hier auf die dritte Option "Deine Daten herunterladen".',
-    'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.'
+    'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.',
+    'Die .zip Datei kannst du auf dieseer Seite hochladen.'
 ];
 var bullets = {
     twitter: {
@@ -123,7 +124,7 @@ var bullets = {
     },
     tiktok: {
         en: bulletsTikTokEn,
-        de: bulletsTikTokDe
+        nl: bulletsTikTokNl
     }
 };
 function linkEn(link) {
@@ -151,7 +152,7 @@ var links = {
     },
     tiktok: {
         en: linkEn(linkTikTokEn),
-        de: linkNl(linkTikTokDe)
+        nl: linkNl(linkTikTokDe)
     }
 };
 var icon = {

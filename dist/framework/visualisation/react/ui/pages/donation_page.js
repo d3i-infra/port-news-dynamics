@@ -66,6 +66,5 @@ function prepareCopy(_a) {
 var forwardButtonLabel = function () {
     return new TextBundle()
         .add('en', 'Skip')
-        .add('nl', 'Overslaan')
-        .add('de', 'Überspringen');
+        .add('nl', 'Überspringen');
 };

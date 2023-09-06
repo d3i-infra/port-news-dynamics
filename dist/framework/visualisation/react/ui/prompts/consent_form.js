@@ -145,17 +145,13 @@ function prepareCopy(_a) {
 }
 var donateQuestionLabel = new TextBundle()
     .add('en', 'Do you want to donate the above data?')
-    .add('nl', 'Wilt u de bovenstaande gegevens doneren?')
-    .add('de', 'Möchten sie die oben gelisteten Daten spenden?');
+    .add('nl', 'Möchten sie die oben gelisteten Daten spenden?');
 var donateButtonLabel = new TextBundle()
     .add('en', 'Yes, donate')
-    .add('nl', 'Ja, doneer')
-    .add('de', 'Ja, spende');
+    .add('nl', 'Ja, spende');
 var cancelButtonLabel = new TextBundle()
     .add('en', 'No')
-    .add('nl', 'Nee')
-    .add('de', 'Nein');
+    .add('nl', 'Nein');
 var description = new TextBundle()
-    .add('en', 'Determine whether you would like to donate the data below. Carefully check the data and adjust when required. With your donation you contribute to the previously described research. Thank you in advance.')
-    .add('nl', 'Bepaal of u de onderstaande gegevens wilt doneren. Bekijk de gegevens zorgvuldig en pas zo nodig aan. Met uw donatie draagt u bij aan het eerder beschreven onderzoek. Alvast hartelijk dank.')
-    .add('de', 'Bestimmen Sie, ob Sie die unten gelisteten Daten spenden möchten. Überprüfen Sie die Daten sorgfältig und passen Sie sie bei Bedarf an. Mit Ihrer Spende leisten Sie einen Beitrag zur zuvor beschriebenen Forschung. Vielen Dank im Voraus.');
+    .add('en', 'Determine whether you would like to donate the data below. With your donation you contribute to the previously described research. Thank you in advance.')
+    .add('nl', 'Bestimmen Sie, ob Sie die unten gelisteten Daten spenden möchten. Mit Ihrer Spende leisten Sie einen Beitrag zur zuvor beschriebenen Forschung. Vielen Dank im Voraus.');
