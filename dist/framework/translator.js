@@ -1,6 +1,6 @@
 import { isTranslatable } from './types/elements';
 export var Translator = (function () {
-    var defaultLocale = 'nl';
+    var defaultLocale = 'de';
     function translate(text, locale) {
         if (typeof text === 'string') {
             return text;

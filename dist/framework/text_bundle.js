@@ -2,7 +2,7 @@ import _ from 'lodash';
 var TextBundle = /** @class */ (function () {
     function TextBundle() {
         this.translations = {};
-        this.defaultLocale = 'nl';
+        this.defaultLocale = 'de';
     }
     TextBundle.prototype.add = function (locale, text) {
         this.translations[locale] = text;

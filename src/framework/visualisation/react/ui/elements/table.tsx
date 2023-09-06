@@ -487,7 +487,6 @@ function deletedNoneRowLabel (): TextBundle {
     .add('en', 'No adjustments')
     .add('nl', 'Geen aanpassingen')
     .add('de', 'Keine Anpassungen')
-
 }
 
 function deletedRowLabel (amount: number): TextBundle {
@@ -495,7 +494,6 @@ function deletedRowLabel (amount: number): TextBundle {
     .add('en', `${amount} row deleted`)
     .add('nl', `${amount} rij verwijderd`)
     .add('de', `${amount} Zeilen gelöscht`)
-
 }
 
 function deletedRowsLabel (amount: number): TextBundle {
@@ -503,7 +501,6 @@ function deletedRowsLabel (amount: number): TextBundle {
     .add('en', `${amount} rows deleted`)
     .add('nl', `${amount} rijen verwijderd`)
     .add('de', `${amount} Zeilen gelöscht`)
-
 }
 
 function deletedLabel (amount: number): TextBundle {

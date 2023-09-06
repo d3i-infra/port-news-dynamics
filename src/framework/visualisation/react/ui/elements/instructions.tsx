@@ -162,7 +162,7 @@ const bullets: Record<string, Record<string, string[]>> = {
     en: bulletsYoutubeEn,
     nl: bulletsYoutubeNl
   },
-   tiktok: {
+  tiktok: {
     en: bulletsTikTokEn,
     de: bulletsTikTokDe
   }

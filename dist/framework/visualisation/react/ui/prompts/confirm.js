@@ -22,7 +22,7 @@ export var Confirm = function (props) {
     function handleCancel() {
         resolve === null || resolve === void 0 ? void 0 : resolve({ __type__: 'PayloadFalse', value: false });
     }
-    return (_jsxs(_Fragment, { children: [_jsx(BodyLarge, { text: text, margin: 'mb-4' }), _jsxs("div", __assign({ className: 'flex flex-row gap-4' }, { children: [_jsx(PrimaryButton, { label: ok, onClick: handleOk, color: 'text-grey1 bg-tertiary' }), _jsx(PrimaryButton, { label: cancel, onClick: handleCancel, color: 'text-white bg-primary' })] }))] }));
+    return (_jsxs(_Fragment, { children: [_jsx(BodyLarge, { text: text, margin: 'mb-4' }), _jsxs("div", __assign({ className: 'flex flex-row gap-4' }, { children: [ok !== '' && _jsx(PrimaryButton, { label: ok, onClick: handleOk, color: 'text-grey1 bg-tertiary' }), cancel !== '' && _jsx(PrimaryButton, { label: cancel, onClick: handleCancel, color: 'text-white bg-primary' })] }))] }));
 };
 function prepareCopy(_a) {
     var text = _a.text, ok = _a.ok, cancel = _a.cancel, locale = _a.locale;

@@ -22,7 +22,9 @@ function prepareCopy(_a) {
 }
 var title = new TextBundle()
     .add('en', 'Thank you')
-    .add('nl', 'Bedankt');
+    .add('nl', 'Bedankt')
+    .add('de', 'Vielen Dank');
 var text = new TextBundle()
     .add('en', 'Thank you for your participation. You can now close the page or refresh to restart the donation flow.')
-    .add('nl', 'Hartelijk dank voor uw deelname. U kunt deze pagina nu sluiten of de pagina verversen om de flow nogmaals te doorlopen.');
+    .add('nl', 'Hartelijk dank voor uw deelname. U kunt deze pagina nu sluiten of de pagina verversen om de flow nogmaals te doorlopen.')
+    .add('de', 'Vielen Dank für ihre Teilnahme. Sie können die Website jetzt schließen oder neu laden um den Spende-Vorgang neu zu beginnen.');

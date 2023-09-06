@@ -50,6 +50,9 @@ export var DonationPage = function (props) {
     }
     var footer = (_jsx(Footer, { middle: _jsx(Progress, { percentage: props.footer.progressPercentage }), right: _jsxs("div", __assign({ className: 'flex flex-row' }, { children: [_jsx("div", { className: 'flex-grow' }), _jsx(ForwardButton, { label: forwardButton, onClick: handleSkip })] })) }));
     var sidebar = (_jsx(Sidebar, { logo: LogoSvg, content: _jsx(Instructions, { platform: platform, locale: locale }) }));
+    //  const sidebar: JSX.Element = (
+    //    <> </>
+    // )
     var body = (_jsxs(_Fragment, { children: [_jsx(Title1, { text: title }), renderBody(props)] }));
     return (_jsx(Page, { body: body, sidebar: sidebar, footer: footer }));
 };
@@ -63,5 +66,6 @@ function prepareCopy(_a) {
 var forwardButtonLabel = function () {
     return new TextBundle()
         .add('en', 'Skip')
-        .add('nl', 'Overslaan');
+        .add('nl', 'Overslaan')
+        .add('de', 'Überspringen');
 };

@@ -13,6 +13,7 @@ import { jsxs as _jsxs, Fragment as _Fragment, jsx as _jsx } from "react/jsx-run
 import { Translator } from '../../../../translator';
 import { Title3 } from './text';
 import TwitterSvg from '../../../../../assets/images/twitter.svg';
+import TiktokSvg from '../../../../../assets/images/tiktok.svg';
 import FacebookSvg from '../../../../../assets/images/facebook.svg';
 import InstagramSvg from '../../../../../assets/images/instagram.svg';
 import YoutubeSvg from '../../../../../assets/images/youtube.svg';
@@ -22,6 +23,8 @@ var linkTwitter = 'https://eyra.co';
 var linkFacebook = 'https://eyra.co';
 var linkInstagram = 'https://eyra.co';
 var linkYoutube = 'https://eyra.co';
+var linkTikTokDe = 'https://support.tiktok.com/de/account-and-privacy/personalized-ads-and-data/requesting-your-data';
+var linkTikTokEn = 'https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data';
 export var Instructions = function (props) {
     var title = prepareCopy(props).title;
     var locale = props.locale;
@@ -42,7 +45,8 @@ function prepareCopy(_a) {
 }
 var title = new TextBundle()
     .add('en', 'Download')
-    .add('nl', 'Download');
+    .add('nl', 'Download')
+    .add('de', 'Download');
 function renderBullet(text) {
     return (_jsx(Bullet, __assign({ frameSize: 'w-5 h-30px' }, { children: _jsx("div", { children: text }) })));
 }
@@ -86,6 +90,20 @@ var bulletsYoutubeNl = [
     'Klik op de link “Je bestanden downloaden” en sla het bestand op.',
     'Kies het bestand en ga verder.'
 ];
+var bulletsTikTokEn = [
+    'Open your Tiktok App & click on "Profile" in the lower right corner.',
+    'Klick on the three vertical lines to open a hidden menu in the upper left corner',
+    'Click on "Settings and privacy" and then on "Account".',
+    'Here choose the thrid option "Download your data".',
+    'Switch to the "Download data" tab and download your data donation.'
+];
+var bulletsTikTokDe = [
+    'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
+    'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
+    'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
+    'Klick hier auf die dritte Option "Deine Daten herunterladen".',
+    'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.'
+];
 var bullets = {
     twitter: {
         en: bulletsTwitterEn,
@@ -102,6 +120,10 @@ var bullets = {
     youtube: {
         en: bulletsYoutubeEn,
         nl: bulletsYoutubeNl
+    },
+    tiktok: {
+        en: bulletsTikTokEn,
+        de: bulletsTikTokDe
     }
 };
 function linkEn(link) {
@@ -126,11 +148,16 @@ var links = {
     youtube: {
         en: linkEn(linkYoutube),
         nl: linkNl(linkYoutube)
+    },
+    tiktok: {
+        en: linkEn(linkTikTokEn),
+        de: linkNl(linkTikTokDe)
     }
 };
 var icon = {
     twitter: TwitterSvg,
     facebook: FacebookSvg,
     instagram: InstagramSvg,
-    youtube: YoutubeSvg
+    youtube: YoutubeSvg,
+    tiktok: TiktokSvg
 };

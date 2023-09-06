@@ -87,10 +87,11 @@ export const SplashScreen = (props: Props): JSX.Element => {
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           Sie stehen kurz davor, den Prozess zu starten, Ihre Daten für ein Forschungsprojekt der Universität von Amsterdam und des Weizenbaum Instituts für die vernetzte Gesellschaft in Berlin zu spenden.
-            Die Daten, um die wir Sie bitten zu spenden, werden für akademische Forschung verwendet, um Einblicke zu gewinnen, wie Plattformen funktionieren.
+          Die Daten, um die wir Sie bitten zu spenden, werden für akademische Forschung verwendet, um Einblicke zu gewinnen, wie Plattformen funktionieren.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-            Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Sie können Zeilen aus den Daten löschen, bevor Sie spenden. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.        </div>
+          Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Sie können Zeilen aus den Daten löschen, bevor Sie spenden. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.
+        </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           Durch das klicken auf den Button “<span className='font-bodybold'>Ja, spenden</span>”:
         </div>
@@ -106,7 +107,8 @@ export const SplashScreen = (props: Props): JSX.Element => {
           </Bullet>
         </div>
         <div className='mb-10'>
-            Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung. Weitere Informationen finden Sie auf unserer Datenschutzseite.        </div>
+          Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung. Weitere Informationen finden Sie auf unserer Datenschutzseite.
+        </div>
       </div>
     </>
   )
