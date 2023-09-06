@@ -229,8 +229,8 @@ def retry_confirmation(platform):
 def retry_confirmation_data_conditions_not_met(platform):
     text = props.Translatable(
         {
-            "en": f"Data conditions not met",
-            "nl": f"Data conditions not met",
+            "en": f"Your data package does not fulfill the necessary requirements for participation due to either too short or too sporadic usage of TikTok. The data collected from you during the onboarding survey will not be used further and will be deleted as soon as possible, no later than within 6 weeks.",
+            "nl": f"Ihr Datenpaket erfüllt nicht die notwendigen Voraussetzungen zur Studienteilnahme aufgrund entweder zu kurzer oder zu sporadischer Nutzung von TikTok. Die von Ihnen während der Einstiegsbefragung gesammelten Daten werden nicht weiter verwendet und so schnellstmöglich gelöscht, spätestens jedoch innerhalb von 6 Wochen.",
         }
     )
     ok = props.Translatable({"en": "",  "nl": ""})
@@ -241,8 +241,8 @@ def retry_confirmation_data_conditions_not_met(platform):
 def prompt_file(extensions, platform):
     description = props.Translatable(
         {
-            "en": f"Please follow the download instructions and choose the file that you stored on your device. Click “Skip” at the right bottom, if you do not have a file from {platform}.",
-            "nl": f"Bitte folge der Download-Anleitung und wähle die entsprechende Datei aus. Drücke 'Überspringen' wenn du keine {platform} Datei hast."
+            "en": f"Please follow the download instructions on this page and choose the file (.zip) that you stored on your device.",
+            "nl": f"Bitte folge der Download-Anleitung auf dieser Seite und wähle die entsprechende Datei (.zip) aus."
         }
     )
     return props.PropsUIPromptFileInput(description, extensions)
