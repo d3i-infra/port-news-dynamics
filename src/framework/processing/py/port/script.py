@@ -230,7 +230,7 @@ def retry_confirmation_data_conditions_not_met(platform):
     text = props.Translatable(
         {
             "en": f"Your data package does not fulfill the necessary requirements for participation due to either too short or too sporadic usage of TikTok. The data collected from you during the onboarding survey will not be used further and will be deleted as soon as possible, no later than within 6 weeks.",
-            "nl": f"Ihr Datenpaket erfüllt nicht die notwendigen Voraussetzungen zur Studienteilnahme aufgrund entweder zu kurzer oder zu sporadischer Nutzung von TikTok. Die von Ihnen während der Einstiegsbefragung gesammelten Daten werden nicht weiter verwendet und so schnellstmöglich gelöscht, spätestens jedoch innerhalb von 6 Wochen.",
+            "nl": f"Dein Datenpaket erfüllt nicht die notwendigen Voraussetzungen zur Studienteilnahme aufgrund entweder zu kurzer oder zu sporadischer Nutzung von TikTok. Die von dir während der Einstiegsbefragung gesammelten Daten werden nicht weiter verwendet und schnellstmöglich gelöscht, spätestens jedoch innerhalb von 6 Wochen.",
         }
     )
     ok = props.Translatable({"en": "",  "nl": ""})

@@ -141,9 +141,9 @@ const bulletsTikTokNl: string[] = [
   'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
   'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
   'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
-  'Klick hier auf die dritte Option "Deine Daten herunterladen".',
-  'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.',
-  'Die .zip Datei kannst du auf dieseer Seite hochladen.'
+  'Tippe hier auf die dritte Option "Deine Daten herunterladen".',
+  'Wechsel zum "Daten runterladen"-Tab lade deine Datenspende runter.',
+  'Die .zip Datei kannst du auf dieser Seite hochladen.'
 ]
 
 const bullets: Record<string, Record<string, string[]>> = {
@@ -174,7 +174,7 @@ function linkEn (link: string): JSX.Element {
 }
 
 function linkNl (link: string): JSX.Element {
-  return <div>Klik <span className='text-primary underline'><a href={link} target='_blank' rel='noreferrer'>hier</a></span> voor uitgebreidere instructies</div>
+  return <div>Klick <span className='text-primary underline'><a href={link} target='_blank' rel='noreferrer'>hier</a></span> für erweiterete Anweisungen.</div>
 }
 
 const links: Record<string, Record<string, JSX.Element>> = {
