@@ -115,6 +115,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
           Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung. Weitere Informationen finden Sie auf unserer Datenschutzseite.
         </div>
       </div>
+     </div>
     </>
   )
 

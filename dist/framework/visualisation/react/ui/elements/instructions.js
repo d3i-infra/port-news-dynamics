@@ -101,9 +101,9 @@ var bulletsTikTokNl = [
     'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
     'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
     'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
-    'Klick hier auf die dritte Option "Deine Daten herunterladen".',
-    'Wechsel zum "Daten runterladen" tab lade deine Datenspende runter.',
-    'Die .zip Datei kannst du auf dieseer Seite hochladen.'
+    'Tippe hier auf die dritte Option "Deine Daten herunterladen".',
+    'Wechsel zum "Daten runterladen"-Tab lade deine Datenspende runter.',
+    'Die .zip Datei kannst du auf dieser Seite hochladen.'
 ];
 var bullets = {
     twitter: {
@@ -131,7 +131,7 @@ function linkEn(link) {
     return _jsxs("div", { children: ["Click ", _jsx("span", __assign({ className: 'text-primary underline' }, { children: _jsx("a", __assign({ href: link, target: '_blank', rel: 'noreferrer' }, { children: "here" })) })), " for more extensive instructions"] });
 }
 function linkNl(link) {
-    return _jsxs("div", { children: ["Klik ", _jsx("span", __assign({ className: 'text-primary underline' }, { children: _jsx("a", __assign({ href: link, target: '_blank', rel: 'noreferrer' }, { children: "hier" })) })), " voor uitgebreidere instructies"] });
+    return _jsxs("div", { children: ["Klick ", _jsx("span", __assign({ className: 'text-primary underline' }, { children: _jsx("a", __assign({ href: link, target: '_blank', rel: 'noreferrer' }, { children: "hier" })) })), " f\u00FCr erweiterete Anweisungen."] });
 }
 var links = {
     twitter: {

@@ -153,5 +153,5 @@ var cancelButtonLabel = new TextBundle()
     .add('en', 'No')
     .add('nl', 'Nein');
 var description = new TextBundle()
-    .add('en', 'Determine whether you would like to donate the data below. With your donation you contribute to the previously described research. Thank you in advance.')
-    .add('nl', 'Bestimmen Sie, ob Sie die unten gelisteten Daten spenden möchten. Mit Ihrer Spende leisten Sie einen Beitrag zur zuvor beschriebenen Forschung. Vielen Dank im Voraus.');
+    .add('en', 'Determine whether you would like to donate the data below at the end of this page. With your donation you contribute to the previously described research. Thank you in advance.')
+    .add('nl', 'Bestimmen Sie am Ende dieser Seite, ob Sie die unten gelisteten Daten spenden möchten. Mit Ihrer Spende leisten Sie einen Beitrag zur zuvor beschriebenen Forschung. Vielen Dank im Voraus.');
