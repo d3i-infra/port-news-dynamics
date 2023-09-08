@@ -63,7 +63,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
           We will walk you through this process step by step. During this process no data is stored or sent to a server. Data will only be donated and stored when you click the button “Yes, donate” on the page that shows your data.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          For the doantion of a valid data package you will receive 20 Euroes. A valid data package contains at activity on at list 5 different days or at least 200 activity instances in total.
+          For the doantion of a valid data package you will receive <span className='font-bodybold'>20 Euros</span>. A valid data package contains at activity on at list 5 different days or at least 200 activity instances in total.
         </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           By clicking the button “<span className='font-bodybold'>Yes, donate</span>”:
@@ -99,7 +99,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
           Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.
           </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          Für das einreichen einer gültigen Datenspende erhalten Sie 20 Euro als Entschädigung. Die Datenspende ist nur dann gültig wenn diese an mindestens 5 Tagen Aktivitäten enthält oder mindestens 200 Aktivitäts-Einträge insgesamt.
+          Für das einreichen einer gültigen Datenspende erhalten Sie <span className='font-bodybold'>20 Euro</span> als Entschädigung. Die Datenspende ist nur dann gültig wenn diese an mindestens 5 Tagen Aktivitäten enthält oder mindestens 200 Aktivitäts-Einträge insgesamt.
           </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           Durch das klicken auf den Button “<span className='font-bodybold'>Ja, spenden</span>”:
@@ -122,7 +122,6 @@ export const SplashScreen = (props: Props): JSX.Element => {
           Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung. Weitere Informationen finden Sie auf unserer Datenschutzseite.
         </div>
       </div>
-     </div>
     </>
   )
 
