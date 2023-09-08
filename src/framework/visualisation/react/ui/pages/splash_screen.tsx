@@ -56,14 +56,14 @@ export const SplashScreen = (props: Props): JSX.Element => {
     <>
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          You are about to start the process of donating your data for a research project run by the University of Amsterdam and the Weizenbaum Instiute for the Networked Society in Berlin.
+          You are about to start the process of donating your TikTok data for a research project run by the University of Amsterdam and the Weizenbaum Instiute for the Networked Society in Berlin.
           The data that we ask you to donate will be used for academic research to gain insight into how social media platforms work.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           We will walk you through this process step by step. During this process no data is stored or sent to a server. Data will only be donated and stored when you click the button “Yes, donate” on the page that shows your data.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          For the doantion of a valid data package you will receive <span className='font-bodybold'>20 Euros</span>. A valid data package contains at activity on at list 5 different days or at least 200 activity instances in total.
+          For the donation of a valid data package you will receive <span className='font-bodybold'>20 Euros</span>. A valid data package contains an activity on at least 5 different days or at least 200 activity instances in total.
         </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           By clicking the button “<span className='font-bodybold'>Yes, donate</span>”:
@@ -76,14 +76,14 @@ export const SplashScreen = (props: Props): JSX.Element => {
             <div>you fully and voluntarily agree to donate your data for this research.</div>
           </Bullet>
           <Bullet>
-            <div>you are aware that when your data is used for academic publications, or made publicly available in some other form, this will be anonymous.</div>
+            <div>you are aware that when your data is used for academic publications, or made publicly available in some other form, this will be anonymized.</div>
           </Bullet>
           <Bullet>
             <div>you are aware that you have the right to withdraw your permission for this data to be used, until the pseudonyms are deleted from the dataset. This will happen once the data collection phase has ended, no later than within 6 weeks.</div>
           </Bullet>
         </div>
         <div className='mb-10'>
-          This website keeps track of your activity - for example on which pages of this website you click - as part of this research. More information can be found on our privacy page.
+          This website keeps track of your activity - for example on which pages of this website you click - as part of this research.
         </div>
       </div>
     </>
@@ -93,7 +93,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
     <>
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-        Sie stehen kurz davor, den Prozess zu starten, Ihre Daten für ein Forschungsprojekt der Universität von Amsterdam und des Weizenbaum Instituts für die vernetzte Gesellschaft in Berlin zu spenden. Die Daten, um deren Spende wir Sie bitten, werden für die akademische Forschung verwendet, um Einblicke darüber zu gewinnen, wie Social Media Plattformen funktionieren.
+        Sie stehen kurz davor, den Prozess zu starten, Ihre TikTok-Daten für ein Forschungsprojekt der Universität von Amsterdam und des Weizenbaum Instituts für die vernetzte Gesellschaft in Berlin zu spenden. Die Daten, um deren Spende wir Sie bitten, werden für die akademische Forschung verwendet, um Einblicke darüber zu gewinnen, wie TikTok funktionieren.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.
@@ -119,7 +119,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
           </Bullet>
         </div>
         <div className='mb-10'>
-          Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung. Weitere Informationen finden Sie auf unserer Datenschutzseite.
+          Diese Website verfolgt Ihre Aktivitäten - zum Beispiel, auf welchen Seiten dieser Website Sie klicken - als Teil dieser Forschung.
         </div>
       </div>
     </>

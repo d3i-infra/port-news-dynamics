@@ -107,5 +107,5 @@ const note = (): Translatable => {
 const placeholder = (): Translatable => {
   return new TextBundle()
     .add('en', 'Choose a file')
-    .add('nl', 'Datei auswählen')
+    .add('nl', 'Wähle eine Datei aus')
 }
