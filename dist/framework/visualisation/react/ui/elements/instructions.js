@@ -90,20 +90,24 @@ var bulletsYoutubeNl = [
     'Kies het bestand en ga verder.'
 ];
 var bulletsTikTokEn = [
-    'Open your Tiktok App & click on "Profile" in the lower right corner.',
-    'Klick on the three vertical lines in the upper left corner to open a menu at the bottom of the screen.',
-    'Click on "Settings and privacy" and then on "Account".',
+    'Open your Tiktok App and tap on "Profile" in the lower right corner.',
+    'Tap on the three vertical lines in the upper left corner to open a menu at the bottom of the screen.',
+    'Tap on "Settings and privacy" and then on "Account".',
     'Here choose the thrid option "Download your data".',
-    'Switch to the "Download data" tab and download your data donation.',
-    'The downloaded .zip file you can upload directly on this page.'
+    'Switch to the "Download data" tab and download your data donation. Follow the download instructions by TikTok.',
+    'Once downloaded you can close your TikTok App and switch back to this WebApp.',
+    'In case you opened the WebApp on the same device on which you use TikTok you can now proceed with tapping the "Choose file" button. Otherwise please transfer the downaloded file to the device where you have this WebApp open and proceed then.',
+    'Should any issue occure during this process please reach out directly to lion.wedel@weizenbaum-institut.de.'
 ];
 var bulletsTikTokNl = [
     'Öffnen deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
     'Öffne das Kontextmenü über die drei vertikalen Linien oben-rechts.',
     'Wähle "Einstellungen und Datenschutz" und dann "Konto".',
     'Tippe hier auf die dritte Option "Deine Daten herunterladen".',
-    'Wechsel zum "Daten runterladen"-Tab und lade deine Datenspende runter.',
-    'Die .zip Datei kannst du dann über diese Seite auswählen.'
+    'Wechsel zum "Daten runterladen"-Tab und lade deine Datenspende runter. Folge den Download-Anweisungen von TikTok',
+    'Nach dem erfolgreichen Download kannst du die TikTok App schließen und zur Studie zurückkehren.',
+    'Wenn du die Studien-Seite auf dem gleichen Gerät geöffnet hast auf dem du auch TikTok benutzt kannst du nun mit "Datei auswählen" fortfahren. Wenn nicht, sende die Datei bitte an das Gerät auf dem du die Studien-Seite geöffnet hast und wähle dann "Datei auswählen".',
+    'Wenn irgentwelche Probleme auftauchen sollten, wende dich bitte direkt an lion.wedel@weizenbaum-institut.de.'
 ];
 var bullets = {
     twitter: {

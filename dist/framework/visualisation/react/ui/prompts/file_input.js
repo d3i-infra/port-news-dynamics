@@ -72,5 +72,5 @@ var note = function () {
 var placeholder = function () {
     return new TextBundle()
         .add('en', 'Choose a file')
-        .add('nl', 'Datei auswählen');
+        .add('nl', 'Wähle eine Datei aus');
 };
