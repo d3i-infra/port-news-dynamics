@@ -181,11 +181,11 @@ function prepareCopy ({ locale }: Props): Copy {
 
 const donateQuestionLabel = new TextBundle()
   .add('en', 'Do you want to donate the above data?')
-  .add('nl', 'Möchten sie die oben gelisteten Daten spenden?')
+  .add('nl', 'Möchten Sie die oben gelisteten Daten spenden?')
 
 const donateButtonLabel = new TextBundle()
   .add('en', 'Yes, donate')
-  .add('nl', 'Ja, spende')
+  .add('nl', 'Ja, spenden')
 
 const cancelButtonLabel = new TextBundle()
   .add('en', 'No')

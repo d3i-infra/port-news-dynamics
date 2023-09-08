@@ -130,20 +130,20 @@ const bulletsYoutubeNl: string[] = [
 
 const bulletsTikTokEn: string[] = [
   'Open your Tiktok App & click on "Profile" in the lower right corner.',
-  'Klick on the three vertical lines to open a hidden menu in the upper left corner',
+  'Klick on the three vertical lines in the upper left corner to open a menu at the bottom of the screen.',
   'Click on "Settings and privacy" and then on "Account".',
   'Here choose the thrid option "Download your data".',
   'Switch to the "Download data" tab and download your data donation.',
-  'The .zip file you can upload directly on this page.'
+  'The downloaded .zip file you can upload directly on this page.'
 ]
 
 const bulletsTikTokNl: string[] = [
-  'Öffne deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
-  'Öffne ein Kontextmenu über die drei vertikalen Linien oben-rechts.',
-  'Wähle "Einstellungen and Datenschutz" und dann "Konto".',
+  'Öffnen deine TikTok App & klick auf "Profil" rechts-unten auf dem Bildschirm.',
+  'Öffne das Kontextmenü über die drei vertikalen Linien oben-rechts.',
+  'Wähle "Einstellungen und Datenschutz" und dann "Konto".',
   'Tippe hier auf die dritte Option "Deine Daten herunterladen".',
-  'Wechsel zum "Daten runterladen"-Tab lade deine Datenspende runter.',
-  'Die .zip Datei kannst du auf dieser Seite hochladen.'
+  'Wechsel zum "Daten runterladen"-Tab und lade deine Datenspende runter.',
+  'Die .zip Datei kannst du dann über diese Seite auswählen.'
 ]
 
 const bullets: Record<string, Record<string, string[]>> = {
@@ -174,7 +174,7 @@ function linkEn (link: string): JSX.Element {
 }
 
 function linkNl (link: string): JSX.Element {
-  return <div>Klick <span className='text-primary underline'><a href={link} target='_blank' rel='noreferrer'>hier</a></span> für erweiterete Anweisungen.</div>
+  return <div>Klick <span className='text-primary underline'><a href={link} target='_blank' rel='noreferrer'>hier</a></span> für erweiterte Anweisungen.</div>
 }
 
 const links: Record<string, Record<string, JSX.Element>> = {

@@ -62,6 +62,9 @@ export const SplashScreen = (props: Props): JSX.Element => {
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           We will walk you through this process step by step. During this process no data is stored or sent to a server. Data will only be donated and stored when you click the button “Yes, donate” on the page that shows your data.
         </div>
+        <div className='mb-4 text-bodylarge font-body text-grey1'>
+          For the doantion of a valid data package you will receive 20 Euroes. A valid data package contains at activity on at list 5 different days or at least 200 activity instances in total.
+        </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           By clicking the button “<span className='font-bodybold'>Yes, donate</span>”:
         </div>
@@ -94,6 +97,10 @@ export const SplashScreen = (props: Props): JSX.Element => {
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.
+          </div>
+        <div className='mb-4 text-bodylarge font-body text-grey1'>
+          Für das einreichen einer gültigen Datenspende erhalten Sie 20 Euro als Entschädigung. Die Datenspende ist nur dann gültig wenn diese an mindestens 5 Tagen Aktivitäten enthält oder mindestens 200 Aktivitäts-Einträge insgesamt.
+          </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           Durch das klicken auf den Button “<span className='font-bodybold'>Ja, spenden</span>”:
         </div>
@@ -105,7 +112,7 @@ export const SplashScreen = (props: Props): JSX.Element => {
             <div>erklären Sie sich vollständig und freiwillig einverstanden, Ihre Daten für diese Forschung zu spenden.</div>
           </Bullet>
           <Bullet>
-            <div>Sind Sie sich bewusst, dass Ihre Daten für akademische Veröffentlichungen genutzt werden oder in einer anderen Form öffentlich gemacht werden können, dies geschieht in anonymisierter Form.</div>
+            <div>erklären Sie sich einverstanden, dass Ihre Daten für akademische Veröffentlichungen genutzt werden oder in einer anderen Form öffentlich gemacht werden können, dies geschieht in anonymisierter Form.</div>
           </Bullet>
           <Bullet>
             <div>sind Sie sich darüber im Klaren, dass Sie das Recht haben, Ihre Zustimmung zur Teilnahme auch nachträglich zurückzuziehen. Jedoch nur, bis die Datenspenden vollständig anonymisiert werden (d.h. wenn die Pseudonyme aus dem Datensatz entfernt sind). Dies ist spätestens in 6 Wochen der Fall.</div>
