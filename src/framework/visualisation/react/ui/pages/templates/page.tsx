@@ -11,7 +11,7 @@ export const Page = (props: PageProps): JSX.Element => {
         <div className='flex-1 pl-14'>
           {props.body}
         </div>
-        <div className='w-sidebar flex-shrink-0'>
+        <div className='lg:w-1/3 w-sidebar flex-shrink-0'>
           {props.sidebar}
         </div>
       </div>

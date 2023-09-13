@@ -36,8 +36,8 @@ export const Instructions = (props: Props): JSX.Element => {
     return (
       <>
         <div className='flex flex-col gap-4 text-bodymedium font-body text-grey2'>
-          {renderBullets(bullets[platform][locale])}
           {links[platform][locale]}
+          {renderBullets(bullets[platform][locale])}
         </div>
       </>
     )

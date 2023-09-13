@@ -22,7 +22,7 @@ interface SidebarProps {
     <div className='flex flex-col gap-10'>
       <div className='flex-wrap flex flex-row'>
         <div className='flex-grow' />
-        <div className='h-logo'>
+        <div className='lg:h-fit h-logo'>
           <img src={props.logo} />
         </div>
         <div className='flex-grow' />
