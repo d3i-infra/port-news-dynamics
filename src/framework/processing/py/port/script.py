@@ -241,8 +241,8 @@ def retry_confirmation_data_conditions_not_met(platform):
 def prompt_file(extensions, platform):
     description = props.Translatable(
         {
-            "en": f"Please follow the download instructions on this page and choose the file (.zip) that you stored on your device.",
-            "nl": f"Bitte folge der Download-Anleitung auf dieser Seite und wähle die entsprechende Datei (.zip) aus."
+            "en": f"Please follow the download instructions here or on this page and choose the file (.zip) that you stored on your device.",
+            "nl": f"Bitte folge der Download-Anleitung hier oder auf dieser Seite und wähle die entsprechende Datei (.zip) aus."
         }
     )
     return props.PropsUIPromptFileInput(description, extensions)

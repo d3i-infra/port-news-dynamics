@@ -13,8 +13,8 @@ const linkTwitter: string = 'https://eyra.co'
 const linkFacebook: string = 'https://eyra.co'
 const linkInstagram: string = 'https://eyra.co'
 const linkYoutube: string = 'https://eyra.co'
-const linkTikTokDe: string = 'https://support.tiktok.com/de/account-and-privacy/personalized-ads-and-data/requesting-your-data'
-const linkTikTokEn: string = 'https://support.tiktok.com/en/account-and-privacy/personalized-ads-and-data/requesting-your-data'
+const linkTikTokDe: string = 'https://drive.google.com/file/d/1IXjq9vHNnAuyJ7sDbBBbb3XIKfeB9kX4/view?usp=sharing'
+const linkTikTokEn: string = 'https://drive.google.com/file/d/1m-Ulhyba-7kLuLq88Jz3LA53g0ciSO4_/view?usp=sharing'
 
 interface InstructionsProps {
   platform: string

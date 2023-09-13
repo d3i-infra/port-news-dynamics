@@ -93,13 +93,13 @@ export const SplashScreen = (props: Props): JSX.Element => {
     <>
       <div className='text-bodylarge font-body text-grey1'>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-        Sie stehen kurz davor, den Prozess zu starten, Ihre TikTok-Daten für ein Forschungsprojekt der Universität von Amsterdam und des Weizenbaum Instituts für die vernetzte Gesellschaft in Berlin zu spenden. Die Daten, um deren Spende wir Sie bitten, werden für die akademische Forschung verwendet, um Einblicke darüber zu gewinnen, wie TikTok funktionieren.
+        Sie stehen kurz davor, den Prozess zu starten, Ihre TikTok-Daten für ein Forschungsprojekt der Universität von Amsterdam und des Weizenbaum Instituts für die vernetzte Gesellschaft in Berlin zu spenden. Die Daten, um deren Spende wir Sie bitten, werden für die akademische Forschung verwendet, um Einblicke darüber zu gewinnen, wie TikTok funktioniert.
         </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
           Wir werden Sie Schritt für Schritt durch diesen Prozess führen. Während dieses Prozesses werden keine Daten gespeichert oder an einen Server gesendet. Daten werden erst gespendet und gespeichert, wenn Sie auf der Seite, die Ihre Daten anzeigt, auf den Button „Ja, spenden“ klicken.
           </div>
         <div className='mb-4 text-bodylarge font-body text-grey1'>
-          Für das einreichen einer gültigen Datenspende erhalten Sie <span className='font-bodybold'>20 Euro</span> als Entschädigung. Die Datenspende ist nur dann gültig wenn diese an mindestens 5 Tagen Aktivitäten enthält oder mindestens 200 Aktivitäts-Einträge insgesamt.
+          Für das Einreichen einer gültigen Datenspende erhalten Sie <span className='font-bodybold'>20 Euro</span> als Entschädigung. Die Datenspende ist nur dann gültig wenn diese an mindestens 5 Tagen Aktivitäten enthält oder mindestens 200 Aktivitäts-Einträge insgesamt.
           </div>
         <div className='mb-6 text-bodylarge font-body text-grey1'>
           Durch das klicken auf den Button “<span className='font-bodybold'>Ja, spenden</span>”:
