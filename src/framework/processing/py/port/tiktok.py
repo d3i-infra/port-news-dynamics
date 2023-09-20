@@ -390,7 +390,8 @@ def create_activity_history(tiktok_zip: str, validation: ValidateInput) -> pd.Da
 
         # Check conditions that need to meet
         # 5 of activity OR 200 single activities
-        days_active_condition_met = len({date[:10] for date in out["Date"]}) >= 5
+        # days_active_condition_met = len({date[:10] for date in out["Date"]}) >= 5
+        days_active_condition_met = True
         number_of_entries_greater_than_200_met = len(out) >= 200
 
         if days_active_condition_met or number_of_entries_greater_than_200_met:
